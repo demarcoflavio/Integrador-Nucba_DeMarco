@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*/////////////HEADER////////////////////*/
+
+
+
+header {
+  display: flex;
+  height: 70px;
+  background-color: #004225;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo img{
+  
+  height: 80px;
+}
+
+header .navbar {
+  float: right;
+}
+
+header .navbar ul {
+  list-style: none;
+ margin-right: 20px;
+}
+
+
+header .navbar ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+header .navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header .navbar ul li a:hover{
+  color: #FF883E;
+}
+
+
+
+.hamburger-menu {
+  display: none;
+  float: right;
+  cursor: pointer;
+  color: white;
+}
+
+.home {
+  background-image: url('./img/header-home.png'); 
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 160px 0;
+}
+
+.home h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px black;
+}
+
+.home p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: whitesmoke;
+  text-shadow: 1px 1px 2px black;
+}
+
+.btn-home {
+  padding: 10px 20px;
+  background-color: #FF883E;
+  color: whitesmoke;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+  background-color:#3CCF4E;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .header .navbar {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .header .navbar.active {
+    display: block;
+  }
+
+  .header .navbar.active ul {
+    display: block;
+  }
+
+  .header .navbar ul {
+    display: none;
+    background-color: #008000; /* Fondo verde inglés */
+    padding: 20px;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header .navbar ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+  /*//////////////EXPERIENCE///////////////*/
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+  }
+
+
+  .column-row {
+    flex: 1;
+    padding: 20px;
+    max-width: 560px;
+    text-align: center;
+  }
+  
+  .image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .column-row h2 {
+    color: #004225;
+    font-size: 30px;
+  }
+  
+  p {
+    color: black;
+  }
+  
+  .ctn-2 {
+    padding: 10px 20px;
+    background-color: #3CCF4E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    
+  }
+  
+  .ctn-2:hover {
+    background-color: #FF883E;
+  }
+
+
+  /*//////////////EXPLORE///////////////*/
+
+  .explore{
+    width: 100%;
+    height:100vh;
+    background-image: url(./img/music-live-explore.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+  }
+  
+  .explore-content{
+     width: 60%;
+     padding: 50px;
+     color: whitesmoke;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+  }
+
+  .explore-content h1 {
+    font-size: 7vmin;
+    margin: 50px;
+    text-shadow: 1px 1px 2px black;
+  }
+
+  .explore-content p {
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+  }
+
+  .ctn-3 {
+    padding: 10px 20px;
+    background-color: #FF883E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 40px;
+    text-align: center;
+
+  }
+
+  .ctn-3:hover {
+    background-color: #3CCF4E;
+  }
+
+  /*//////////////DRINKS-FOOD-BRAKFOODS///////////////*/
+
+  
+  .container-drinks {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+  
+  .content-drinks {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .top-drinks {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  
+  .bottom-food {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .image_d {
+    width: calc(25% - 20px); /*  imágenes en 4 columnas con espacios entre ellas */
+    margin-bottom: 20px;
+    border-radius: 7px;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .top-drinks h2 {
+    color: #004225;
+    font-size: 35px;
+    margin-top: 36px;
+  }
+  
+  .top-drinks p {
+    color: black;
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  
+  .ctn-4 {
+    padding: 11px 28px;
+    background-color: #3CCF4E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 23px;
+  }
+  
+  .ctn-4:hover {
+    background-color: #FF883E;
+  }
+
+  /*//////////////CONTACT///////////////*/
+
+  
+  .container_contact {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-title {
+    color: #004225;
+    font-size: 30px;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+  
+  .contact-form {
+    width: 100%;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+
+  .ctn-5 {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .ctn-5 {
+    background-color: #3CCF4E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .ctn-5:hover {
+    background-color: #FF883E;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #FF883E;
+  }
+
+
+/*//////////////FOOTER//////////////*/
+
+.footer {
+  background-color: #004225;
+  padding: 55px 0;
+}
+
+.container_footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  text-align: center;
+  padding: 0 10px;
+}
+
+ .address, .phone, .email {
+  color:whitesmoke;
+}
+
+.logo-footer {
+  width: 211px; 
+}
+
+.address,
+.phone,
+.email {
+  margin-bottom: 10px;
+}
+
+.social-icons-footer {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-icons-footer li {
+  margin-bottom: 10px;
+}
+
+.social-icons-footer a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.social-icons-footer a:hover {
+  color: #EF5B0C;
+}
+
+
+
+
+
+
+  /*//////mobile-drinks-foods//////*/
+  
+  @media (max-width: 768px) {
+    .bottom-food .image_d {
+      width: calc(50% - 20px); 
+    }
+  }
+  
+  /*//////mobile-risponsive-experience//////*/
+
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+
+  
+/*//////mobile-risponsive - header//////*/
+
+
+@media screen and (max-width: 768px) {
+    
+  
+    .navbar{
+        padding: 0;
+    }
+
+    nav ul {
+        display: none;
+      }
+
+      .hamburger-menu {
+        display: flex;
+      }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: #EF5B0C;
+        margin-top: -900px;
+    }
+
+    .nav-links li {
+        margin: 30px auto;
+    }
+    
+}
+
+button#scrollBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #FF883E;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+button#scrollBtn:hover {
+  background-color: #3CCF4E;
+}

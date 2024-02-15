@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cork Bar Irlandés</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!--------------------------HEADER----------------------->
+
+     <header>
+            <div class="logo">
+              <img class="#inicio" src="./img/cork-logo-footer-white.png" alt="">
+            </div>
+
+        <nav class="navbar" id="navbar">
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#explore">Música en vivo</a></li>
+            <li><a href="#drinks">Drinks</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+          <div class="hamburger-menu" id="hamburger-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+      
+      </header>
+  
+    <section class="home">
+      <div class="container-home">
+        <h1>La experiencia de Irlanda en Buenos Aires</h1>
+        <p>Buenos amigos, buena cerveza, buenos tiempos.</p>
+        <a href="#" class="btn-home">Ver más</a>
+      </div>
+    </section>
+
+
+  <!-------------------------Experience----------------->
+
+  <section class="row" id="experiencia">
+
+     <div class="column-row">
+      <img src="./img/friends-pub.jpg" alt="Imagen 1" class="image">
+      <h2>Encuentro con amigos</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum lacus eget est semper, sed ultricies ligula fermentum.</p>
+      <button class="ctn-2">Reservar</button>
+    </div>
+    <div class="column-row">
+      <img src="./img/fest-sanpatrick.jpg" alt="Imagen 2" class="image">
+      <h2>Fiesta de San Patricio</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum lacus eget est semper, sed ultricies ligula fermentum.</p>
+      <button class="ctn-2">Reservar</button>
+    </div>
+</section>
+
+<!---------------------------Explore------------------->
+
+<section class="explore" id="explore">
+    <div class="explore-content">
+     <h1>MUSICA EN VIVO</h1>
+     <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas pariatur debitis fuga aut iure accusantium quia temporibus quisquam unde. Quam incidunt nam minus molestias.</P>
+     <button class="ctn-3">Reservar</button>
+    </div>
+</section>
+
+<!--------------------------drinks-------------------->
+
+<div class="container-drinks" id="drinks">
+    <div class="content-drinks">
+      <div class="top-drinks">
+         <h2>TRAGOS, FOODS Y DESAYUNOS</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam corrupti, delectus fugit adipisci earum incidunt.</p>
+         <button class="ctn-4">Botón</button>
+      </div>
+      <div class="bottom-food">
+        <img src="./img/drink-1.png" alt="Imagen 1" class="image_d">
+        <img src="./img/drink-2.png" alt="Imagen 2" class="image_d">
+        <img src="./img/drink-3.png" alt="Imagen 3" class="image_d">
+        <img src="./img/drink-4.png" alt="Imagen 4" class="image_d">
+      </div>
+    </div>
+</div>
+
+<!-----------------------Contact---------------------->
+
+
+<div class="container_contact" id="contacto">
+  <h2 class="contact-title">REALIZA TU CONSULTA O RESERVA</h2>
+  <form class="contact-form" action="#" method="POST">
+    <div class="form-group">
+      <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" required>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" id="email" placeholder="Correo Electrónico" required>
+    </div>
+    <div class="form-group">
+      <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required>
+    </div>
+    
+    <div class="form-group">
+      <textarea id="message" name="message" required>Mensaje</textarea>
+    </div>
+    
+    <div class="form-group">
+      <button class="ctn-5" type="submit">Enviar</button>
+    </div>
+  </form>
+   
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+</div>
+
+<!-----------------------Footer---------------------->
+
+<footer class="footer">
+  <div class="container_footer">
+    <div class="footer-column">
+      <img src="./img/cork-logo-footer-white.png" alt="Logo" class="logo-footer">
+    </div>
+    <div class="footer-column">
+      <p class="address"><i class="date"></i> Dirección: Avda. Corrientes 1223, CABA, Argentina</p>
+      <p class="phone"><i class="date"></i> Teléfono: +54 11 456 789</p>
+      <p class="email"><i class="date"></i> Email: reservas@corkireland.ie</p>
+    </div>
+    <div class="footer-column">
+      <ul class="social-icons-footer">
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<button onclick="topFunction()" id="scrollBtn" title="Ir arriba">↑</button>
+
+
+<!--------------------------JAVASCRIPT------------------------->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const hamburgerMenu = document.getElementById('hamburger-menu');
+  const navbar = document.getElementById('navbar');
+
+  hamburgerMenu.addEventListener('click', function() {
+  navbar.classList.toggle('active');
+    });
+   });
+
+   
+// botón ir arriba//
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    document.getElementById("scrollBtn").style.display = "block";
+  } else {
+    document.getElementById("scrollBtn").style.display = "none";
+  }
+}
+
+//clic en el botón//
+function topFunction() {
+  document.body.scrollTop = 0; // Safari
+  document.documentElement.scrollTop = 0; //otros navegadores
+}
+
+</script>
+
+
+</body>
+</html>
