@@ -4,32 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cork Bar Irlandés</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
 </head>
 <body>
 
     <!--------------------------HEADER----------------------->
 
-     <header>
-            <div class="logo">
-              <img class="#inicio" src="./img/cork-logo-footer-white.png" alt="">
-            </div>
+    <header class="header">
+        
+      <nav class="navbar">
+          <img src="./img/cork-logo-sf.png" alt="logo">
 
-        <nav class="navbar" id="navbar">
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#experiencia">Experiencia</a></li>
-            <li><a href="#explore">Música en vivo</a></li>
-            <li><a href="#drinks">Drinks</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </nav>
-          <div class="hamburger-menu" id="hamburger-menu">
-            <i class="fas fa-bars"></i>
-          </div>
-      
-      </header>
+          <label class="label_hamburguesa" for="menu_hamburguesa">
+
+              <svg xmlns="http://www.w3.org/2000/svg" 
+                 width="35" height="35" fill="currentColor" class="list_icon" 
+                 viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+
+          </label>
+
+          <input class="menu_hamburguesa" type="checkbox" id="menu_hamburguesa">
+
+                      <ul class="ul_links">
+                          <li class="li_links"><a class="link" href="#inicio">Inicio</a></li>
+                          <li class="li_links"><a class="link" href="#experiencia">Experiencia</a></li>
+                          <li class="li_links"><a class="link" href="#explore">Música en vivo</a></li>
+                          <li class="li_links"><a class="link" href="#drinks">Drinks</a></li>
+                          <li class="li_links"><a class="link" href="#contacto">Contacto</a></li>
+                      </ul>
+      </nav>
+    
+    </header>
   
     <section class="home">
       <div class="container-home">
@@ -58,7 +67,7 @@
     </div>
 </section>
 
-<!---------------------------Explore------------------->
+<!---------------------------Musica en vivo------------------->
 
 <section class="explore" id="explore">
     <div class="explore-content">
@@ -66,7 +75,8 @@
      <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas pariatur debitis fuga aut iure accusantium quia temporibus quisquam unde. Quam incidunt nam minus molestias.</P>
      <button class="ctn-3">Reservar</button>
     </div>
-</section>
+
+  </section>
 
 <!--------------------------drinks-------------------->
 
@@ -140,39 +150,10 @@
   </div>
 </footer>
 
-<button onclick="topFunction()" id="scrollBtn" title="Ir arriba">↑</button>
 
 
-<!--------------------------JAVASCRIPT------------------------->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-  const hamburgerMenu = document.getElementById('hamburger-menu');
-  const navbar = document.getElementById('navbar');
 
-  hamburgerMenu.addEventListener('click', function() {
-  navbar.classList.toggle('active');
-    });
-   });
 
-   
-// botón ir arriba//
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    document.getElementById("scrollBtn").style.display = "block";
-  } else {
-    document.getElementById("scrollBtn").style.display = "none";
-  }
-}
-
-//clic en el botón//
-function topFunction() {
-  document.body.scrollTop = 0; // Safari
-  document.documentElement.scrollTop = 0; //otros navegadores
-}
-
-</script>
 
 
 </body>

@@ -14,55 +14,100 @@ html {
 
 /*/////////////HEADER////////////////////*/
 
+a {
+  text-decoration: none;
+}
 
+ol,ul {
+  list-style: none;
+}
 
-header {
-  display: flex;
-  height: 70px;
+.header {
+  height: 95px;
   background-color: #004225;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 0 32px;
 }
 
-.logo img{
-  
-  height: 80px;
-}
-
-header .navbar {
-  float: right;
-}
-
-header .navbar ul {
-  list-style: none;
- margin-right: 20px;
-}
-
-
-header .navbar ul li {
-  display: inline-block;
-  margin-left: 20px;
-}
-
-header .navbar ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-header .navbar ul li a:hover{
-  color: #FF883E;
-}
-
-
-
-.hamburger-menu {
+.menu_hamburguesa {
   display: none;
-  float: right;
-  cursor: pointer;
-  color: white;
 }
+
+.menu_hamburguesa:checked + .ul_links {
+  height: calc(100vh - 80px);
+}
+
+.navbar img {
+  width: 230px;
+}
+
+.list_icon {
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+
+.ul_links {
+
+  width: 100%;
+  background-color: #004225;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  height:0;
+  overflow: hidden;
+  /*height: calc(100vh - 80px);*/ /*ocultar*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  transition: all .3s;
+}
+
+.link {
+  font-size: 25px;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+/*risponsive--menu--hamburguesa*/
+
+@media (min-width:768px){
+  .label_hamburguesa {
+    display:none;
+  }
+
+  .ul_links {
+    position: static;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    gap:32px;
+  }
+
+  .link {
+    font-size: 1.2rem;
+    transition: all .3s;
+    padding: .2rem .7rem;
+  }
+
+  .link:hover{
+    background-color: #FF883E;
+    border-radius: 20px;
+  }
+}
+
+
 
 .home {
   background-image: url('./img/header-home.png'); 
@@ -70,7 +115,7 @@ header .navbar ul li a:hover{
   background-position: center;
   color: #fff;
   text-align: center;
-  padding: 160px 0;
+  padding: 200px 0;
 }
 
 .home h1 {
@@ -99,44 +144,7 @@ header .navbar ul li a:hover{
   background-color:#3CCF4E;
 }
 
-/* Media queries para dispositivos móviles */
-@media (max-width: 768px) {
-  .header .navbar {
-    display: none;
-  }
-
-  .hamburger-menu {
-    display: block;
-  }
-
-  .header .navbar.active {
-    display: block;
-  }
-
-  .header .navbar.active ul {
-    display: block;
-  }
-
-  .header .navbar ul {
-    display: none;
-    background-color: #008000; /* Fondo verde inglés */
-    padding: 20px;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .header .navbar ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
-}
-
-
-
-  /*//////////////EXPERIENCE///////////////*/
+/*//////////////EXPERIENCE///////////////*/
 
   .row {
     display: flex;
@@ -200,6 +208,8 @@ header .navbar ul li a:hover{
     display: flex;
     align-items: center;
   }
+
+  
   
   .explore-content{
      width: 60%;
@@ -238,6 +248,8 @@ header .navbar ul li a:hover{
   .ctn-3:hover {
     background-color: #3CCF4E;
   }
+
+
 
   /*//////////////DRINKS-FOOD-BRAKFOODS///////////////*/
 
