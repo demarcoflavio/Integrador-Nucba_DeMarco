@@ -1,18 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 * {
-
-  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #004225;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
-/*/////////////HEADER////////////////////*/
+.scroll-to-top:hover {
+  background-color: #00331a;
+}
+
+@media only screen and (max-width: 768px) {
+  .scroll-to-top {
+    right: 10px;
+    bottom: 10px;
+  }
+}
 
 a {
   text-decoration: none;
@@ -36,6 +58,7 @@ ol,ul {
   flex-wrap: wrap;
   position: relative;
   padding: 0 32px;
+   
 }
 
 .menu_hamburguesa {
@@ -379,6 +402,29 @@ ol,ul {
   .social-icons a:hover {
     color: #FF883E;
   }
+
+/*/////////////BTN-LOGIN////////////////////*/
+
+.contenedor_login {
+  text-align: center; 
+  margin-top: 40px; 
+}
+
+.btn_login {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px; 
+  background-color: #EF5B0C; 
+  color: #fff; 
+  text-decoration: none; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+.btn_login:hover {
+  background-color: #3CCF4E;
+}
 
 
 /*//////////////FOOTER//////////////*/
